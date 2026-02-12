@@ -3,16 +3,33 @@ import Home from './components/Home'
 import About from './components/About'
 import Details from './components/Details'
 import Contact from './components/Contact'
-import { Routes, Route, Link } from 'react-router-dom'
+import { Routes, Route, NavLink, useNavigate } from 'react-router-dom'
 
 const App = () => {
+
+  const navigate = useNavigate();
   return (
     <div>
       <div className='Navbar'>
-        <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
-        <Link to="/details">Details</Link>
-        <Link to="/contact">Contact</Link>
+        <NavLink to="/" style={({ isActive }) => ({
+          color: isActive ? 'blue' : 'Black'
+        })}>Home</NavLink>
+        <NavLink to="/about" style={({ isActive }) => ({
+          color: isActive ? 'blue' : 'Black'
+        })}>About</NavLink>
+        <NavLink to="/details" style={({ isActive }) => ({
+          color: isActive ? 'blue' : 'Black'
+        })}>Details</NavLink>
+        <NavLink to="/contact" style={({ isActive }) => ({
+          color: isActive ? 'blue' : 'Black'
+        })}>Contact</NavLink>
+      </div>
+
+      <div className='footer'>
+          <h2>Footer</h2>
+          <button onClick={()=>{
+            navigate('/')
+          }}>Back to HomePage</button>
       </div>
 
       <Routes>
