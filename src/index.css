@@ -52,3 +52,29 @@ h1{
   padding: 10px 20px;
   border-radius: 5px;
 }
+
+.navbar{
+  padding: 20px;
+}
+
+.navbar form input{
+  gap: 20px;
+  padding: 20px 25px;
+  display: flex;
+  font-size: 20px;
+  background-color: rgb(255, 255, 255);
+}
+
+.navbar form button{
+  background-color: lightgreen;
+  font-weight: 600;
+  border: none;
+  padding: 20px 25px;
+  border-radius: 5px;
+  gap: 10px;
+}
+
+.Navbar h4{
+  padding: 20px;
+  font-size: 40px;
+}

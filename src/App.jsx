@@ -5,12 +5,19 @@ import Details from './components/Details'
 import Contact from './components/Contact'
 import { Routes, Route, NavLink, useNavigate } from 'react-router-dom'
 import { useState } from 'react'
+import Navbar from './components/Navbar'
 
 const App = () => {
 
   const navigate = useNavigate();
 
   const [count, setcount] = useState(0)
+
+  const [theme, setTheme] = useState('light')
+
+  const changeTheme = (newTheme)=>{
+    setTheme(newTheme)
+  }
 
 const counter = function(){
 
@@ -55,6 +62,9 @@ const counter = function(){
         <Route path="/details" element={<Details />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
+
+      <h4>Theme is {theme}</h4>
+      <Navbar changeTheme={changeTheme}/>
     </div>
   )
 }
