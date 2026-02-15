@@ -65,7 +65,7 @@ const App = () => {
       </Routes>
 
       {/* 🌙 DARK MODE TOGGLE */}
-      <h3>DarkMode State: {darkMode ? "TRUE" : "FALSE"}</h3>
+      {/* <h3>DarkMode State: {darkMode ? "TRUE" : "FALSE"}</h3> */}
 
       <button onClick={() => setDarkMode(!darkMode)}>
         {darkMode ? "Light Mode ☀️" : "Dark Mode 🌙"}
